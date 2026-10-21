@@ -1,16 +1,22 @@
 name: RP2354B
-  cores: 
-   core0:
-   frequency:
-   bits: 
-   priority: 
+cores:
+  core0:
+   frequency: 150
+   bits: 32
+   priority: 0
+  core1:
+   frequency: 150
+   bits: 32
+   priority: 1
 ram:
- size: 
+ size: 520
+ unitram: "KB"
  type: "SRAM"
  external: False
 rom:
- size: 
- type: "Flash"
+ size: 2
+ unitrom: "MB"
+ type: "NOR-Flash"
  external: False
 adc:
  channel: 
@@ -22,17 +28,45 @@ adc:
   5: 45
   6: 46
   7: 47
- resolution:
-dac:
-  channel:
-  resolution:
+ resolution: 12
+#freq in MHz
 protocols:
  i2c:
   i2c0:
    channel:
     scl: [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45]
     sda: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44]
-    frequency:
+    frequency: 1
+  i2c1:
+   channel:
+    scl: [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47]
+    sda: [2, 6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46]
+    frequency: 1
+  SPI0:
+   channel:
+    mosi: [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47]
+    miso: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44]
+    sck: [2, 6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46]
+    csn: [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45]
+    frequency: 75
+  UART0:
+   channel:
+    rx: [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45]
+    tx: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44]
+    rts: [3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47]
+    cts: [2, 6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46]
+    baudrate: 9,375
+  HSTX:
+   channel:
+   dat0: [16, 17]
+   dat1: [14, 15]
+   dat2: [12, 13]
+   clk: [18, 19]
+   frequency: 150
+
+
+
+
   
   
 
