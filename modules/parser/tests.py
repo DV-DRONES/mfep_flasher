@@ -6,3 +6,5 @@ class TestParser(unittest.TestCase):
 
     def test_parsing(self):
         pass
+
+unittest.main()
