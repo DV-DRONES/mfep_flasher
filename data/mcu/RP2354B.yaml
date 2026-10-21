@@ -10,25 +10,26 @@ cores:
    priority: 1
 ram:
  size: 520
- unitram: "KB"
+ unit: "KB"
  type: "SRAM"
  external: False
 rom:
  size: 2
- unitrom: "MB"
+ unit: "MB"
  type: "NOR-Flash"
  external: False
 adc:
- channel: 
-  0: 40
-  1: 41
-  2: 42
-  3: 43
-  4: 44
-  5: 45
-  6: 46
-  7: 47
- resolution: 12
+ adc0:
+   channel: 
+    0: 40
+    1: 41
+    2: 42
+    3: 43
+    4: 44
+    5: 45
+    6: 46
+    7: 47
+   resolution: 12
 #freq in MHz
 protocols:
  i2c:
