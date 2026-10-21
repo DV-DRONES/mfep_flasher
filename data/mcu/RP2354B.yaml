@@ -1,0 +1,41 @@
+name: RP2354B
+  cores: 
+   core0:
+   frequency:
+   bits: 
+   priority: 
+ram:
+ size: 
+ type: "SRAM"
+ external: False
+rom:
+ size: 
+ type: "Flash"
+ external: False
+adc:
+ channel: 
+  0: 40
+  1: 41
+  2: 42
+  3: 43
+  4: 44
+  5: 45
+  6: 46
+  7: 47
+ resolution:
+dac:
+  channel:
+  resolution:
+protocols:
+ i2c:
+  i2c0:
+   channel:
+    scl: [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45]
+    sda: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44]
+    frequency:
+  
+  
+
+
+timers:
+
