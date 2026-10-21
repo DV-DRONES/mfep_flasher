@@ -17,14 +17,3 @@ class Microcontroller:
 
     def __init__(self, config_file:str):
         pass
-"""
-
-name: 
-cores: 
-  core0:
-  frequency: 38
-  bits: 8
-  priority: 0
-timers:
-
-"""
