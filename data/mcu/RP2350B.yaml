@@ -18,7 +18,7 @@ rom:
  unit: "MB"
  type: "NOR-Flash"
  external: False
-adc:
+adcs:
  adc0:
    channel: 
     0: 40
