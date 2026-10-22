@@ -1,8 +1,8 @@
 from hardware import *
 import glob 
 
-def _list_all_yaml_in_dir(path:str):
-    if path.endswith("/") -> list[str]:
+def _list_all_yaml_in_dir(path:str) -> list[str]:
+    if path.endswith("/"):
         return glob.glob(path & "*.yaml")
     else:
         return glob.glob(path & "/*.yaml")
@@ -30,7 +30,7 @@ class HardwareFetcher:
 
         return mcus
 
-    def fetch_boards(self):
+    def fetch_boards(self, path:str) -> list[Board]:
         files = list_all_yaml_in_dir(path)
         boards = []
 
@@ -40,7 +40,7 @@ class HardwareFetcher:
 
         return boards 
 
-    def fetch_sensors(self):
+    def fetch_sensors(self, path:str) -> list[Sensor]:
         files = list_all_yaml_in_dir(path)
         sensors = []
 
@@ -50,7 +50,7 @@ class HardwareFetcher:
 
         return sensors 
     
-    def fetch_auxiliaries(self):
+    def fetch_auxiliaries(self, path:str) -> list[Auxiliary]:
         files = list_all_yaml_in_dir(path)
         auxiliaries = []
 
